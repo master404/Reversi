@@ -46,11 +46,11 @@ namespace ReversiCore
             for (int i = 0; i < 8; i++) {
                 for (int j = 0; j < 8; j++)
                     if (board[i, j] == Cell.Empty)
-                        res.Append(".");
+                        res.Append(" . ");
                     else if (board[i, j] == Cell.Black)
-                        res.Append("*");
+                        res.Append(" * ");
                     else
-                        res.Append("o");
+                        res.Append(" o ");
                 res.AppendLine();
             }
             return res.ToString();

@@ -46,7 +46,8 @@ namespace ReversiCore
                             {
                                 max_price.max_price = node.max_price;
                                 max_price.m = move;
-                                max = node.max_price; 
+                                max = node.max_price;
+                 //               Console.WriteLine("max=" + max);
                             }
                      }
                   //  }
@@ -67,8 +68,8 @@ namespace ReversiCore
                 }
                 else if (max_depth==0)
                 {
-                    if (p == p1) { }//Console.WriteLine("p=p1");
-                    else Console.WriteLine("p!!!!!!!!!!p1");
+           //         if (p == p1) { Console.WriteLine("p=p1"); }
+           //         else Console.WriteLine("p!!!!!!!!!!p1");
                     max_price.max_price=b.Price(p);
                     max_price.m = move;
                     //Console.WriteLine(b.Price(p));
