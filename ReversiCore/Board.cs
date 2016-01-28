@@ -43,14 +43,22 @@ namespace ReversiCore
         public override string ToString()
         {
             var res = new StringBuilder();
-            for (int i = 0; i < 8; i++) {
-                for (int j = 0; j < 8; j++)
-                    if (board[i, j] == Cell.Empty)
-                        res.Append(" . ");
-                    else if (board[i, j] == Cell.Black)
-                        res.Append(" * ");
+            for (int i = 0; i < 9; i++) {
+                for (int j = 0; j < 9; j++)
+                {
+                    if (i == 8 && j == 8) res.Append(" " + i + " ");
                     else
-                        res.Append(" o ");
+                    if (j == 8) res.Append(" " + i + " ");
+                    else
+                    if (i == 8) res.Append(" " + j + " ");
+                    else
+                        if (board[i, j] == Cell.Empty)
+                            res.Append(" . ");
+                        else if (board[i, j] == Cell.Black)
+                            res.Append(" * ");
+                        else
+                            res.Append(" o ");
+                }
                 res.AppendLine();
             }
             return res.ToString();

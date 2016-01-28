@@ -18,6 +18,7 @@ namespace Reversi
             Console.WriteLine(b);
             while(true)
             {
+                Console.WriteLine("White Move: o ");
                 Move m = new Move();
                 Console.WriteLine("Введите координату x:");
                 m.x=Int32.Parse(Console.ReadLine());
